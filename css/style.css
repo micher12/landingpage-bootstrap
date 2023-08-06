@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+}
+/*necessarios*/
+h1{font-family: 'Hittedal Sans', sans-serif;}
+p{font-family: 'Montserrat';}
+.sombra{
+    box-shadow: 2px 4px 12px rgb(0 0 0 / 8%) !important;
+}
+textarea{resize: none !important;}
+/*pagina*/
+.banner{
+    min-height: 80vh;
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.banner > .container{
+    min-height: 80vh;
+}
+.banner > .container::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.contato{
+    min-height: 800px;
+    background-image: url('../img/background.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.wave{
+    min-height: 350px;
+    background-image: url(../img/wave.svg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+
+@media screen and (max-width: 1199px){
+    .equipe .d-flex{
+        flex-direction: column;
+    }
+    .equipe .w-50:not(.d-flex img){
+        width: 80% !important;
+    }
+    .d-flex img{
+        width: 100% !important;
+    }
+    .equipe .card{
+        margin: 20px 0 !important;
+    }
+    .equipe .card img{
+        margin: 0 auto;
+    }
+    .equipe .card-text{
+        padding: 0 !important;
+    }
+    .contato h2 ~ div.w-50{
+        width: 75% !important;
+    }
+}
+@media screen and (max-width: 767px){
+    .section2 h2{
+        font-size: calc(1.375rem + 1.5vw)!important;
+        padding-bottom: 1rem;
+    }
+    .section3 .w-25{
+        width: 50%!important;
+    }
+}
+@media screen and (max-width:500px){
+    .section3 .w-25{
+        width: 100% !important;
+    }
+    section.equipe .container .w-50{
+        width: 100% !important;
+    }
+    .contato h2 ~ div.w-50{
+        width: 100% !important;
+    }
+    .wave{
+        background-position: left;
+    }
+}
